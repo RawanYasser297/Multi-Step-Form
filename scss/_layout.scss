@@ -1,0 +1,10 @@
+@use "mixins" as *;
+
+.layout {
+  @include container(900px);
+  @include grid-center(auto 1fr, 1.5rem);
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}

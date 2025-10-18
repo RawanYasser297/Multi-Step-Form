@@ -1,0 +1,27 @@
+@use './swiper' as *; // contain main box , swiper ,children sections.
+//sections => swiper children.
+@use "./page1.scss" as *;
+@use "./page2.scss" as *;
+@use "./addons" as *;
+@use "./summary" as *;
+
+
+.swapperAndBtnsContainer{
+  width: 500px;
+
+  @media (max-width:500px) {
+     width: 100%;
+  }
+}
+
+  .title {
+    color: var(--blue-950);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: var(--grey-500);
+    margin-bottom: 2rem;
+  }
+

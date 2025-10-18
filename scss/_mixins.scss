@@ -1,0 +1,85 @@
+
+
+$breakpoints: (
+  "mobile": 480px,
+  "tablet": 768px,
+  "laptop": 1024px,
+  "desktop": 1440px
+);
+
+// ✅ مكسن عام لأي breakpoint
+@mixin respond($device) {
+  $size: map-get($breakpoints, $device);
+
+  @if $size {
+    @media (max-width: $size) {
+      @content;
+    }
+  } @else {
+    @warn "⚠️ Device `#{$device}` not found in $breakpoints map.";
+  }
+}
+
+
+@mixin btn($bg, $color: $white) {
+  background-color: $bg;
+  color: $color;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background-color: lighten($bg, 5%);
+  }
+}
+
+@mixin heading-style($size: 1.5rem, $weight: 700) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $blue-950;
+}
+
+
+// 📦 Mixins
+@mixin flex-center($dir: row, $gap: 0) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin grid-center($cols: 1fr, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: $cols;
+  gap: $gap;
+  place-items: center;
+}
+
+@mixin container($max-width: 900px) {
+  width: min(100%, $max-width);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@mixin input-style {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--purple-200);
+  border-radius: 0.4rem;
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  transition: border 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--purple-600);
+  }
+
+  &::placeholder {
+    color: var(--grey-500);
+  }
+}

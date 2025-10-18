@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Step Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+
+<body>
+    <main class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul class="steps">
+                <li class="step active">
+                    <span>1</span>
+                    <div class="step__div">
+                        <p class="step__div__p">STEP 1</p>
+                        <h4 class="step__div__h4">YOUR INFO</h4>
+                    </div>
+                </li>
+                <li class="step">
+                    <span>2</span>
+                    <div class="step__div">
+                        <p class="step__div__p">STEP 2</p>
+                        <h4 class="step__div__h4">SELECT PLAN</h4>
+                    </div>
+                </li>
+                <li class="step">
+                    <span>3</span>
+                    <div class="step__div">
+                        <p class="step__div__p">STEP 3</p>
+                        <h4 class="step__div__h4">ADD-ONS</h4>
+                    </div>
+                </li>
+                <li class="step">
+                    <span>4</span>
+                    <div class="step__div">
+                        <p class="step__div__p">STEP 4</p>
+                        <h4 class="step__div__h4">SUMMARY</h4>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Form Section -->
+         <div class="swapperAndBtnsContainer">
+             <section class="main__section">
+            <div class="sections-wrapper">
+                <section class="form__section">
+                    <h2 class="title">Personal info</h2>
+                    <p class="subtitle">Please provide your name, email address, and phone number.</p>
+
+                    <!-- transparent part -->
+                    <form class="form">
+                        <label>
+                            Name
+                            <input class="name" type="text" placeholder="e.g. Vanessa Mint" />
+                            <small class="error-message"></small>
+                        </label>
+
+                        <label>
+                            Email Address
+                            <input class="email" type="email" placeholder="e.g. vanessamint@lorem.com" />
+                            <small class="error-message"></small>
+                        </label>
+
+                        <label>
+                            Phone Number
+                            <input class="phone" type="tel" placeholder="e.g. +1 234 567 890" />
+                            <small class="error-message"></small>
+                        </label>
+                    </form>
+                </section>
+
+                <!-- Step 2 content -->
+                <section class="plans">
+                    <h2 class="title">Select your plan</h2>
+                    <p class="subtitle">You have the option of monthly or yearly billing.</p>
+                    <div class="pricing__plans">
+                        <div class="plan active">
+                            <div class="plan__icon"><img src="./assets/images/icon-arcade.svg" alt="arcade plan icon">
+                            </div>
+                            <h3 class="plan__name">Arcade</h3>
+                            <div class="plan__price-container">
+                                <div class="price arcade-price"></div>
+                                <div class="price--yearly"></div>
+                            </div>
+                        </div>
+
+                        <div class="plan">
+                            <div class="plan__icon"><img src="./assets/images/icon-advanced.svg"
+                                    alt="advanced plan icon">
+                            </div>
+                            <h3 class="plan__name">Advanced</h3>
+                            <div class="plan__price-container">
+                                <div class="price advanced-price"></div>
+                                <div class="price--yearly"></div>
+                            </div>
+                        </div>
+
+                        <div class="plan">
+                            <div class="plan__icon"><img src="./assets/images/icon-pro.svg" alt="pro plan icon"></div>
+                            <h3 class="plan__name">Pro</h3>
+                            <div class="plan__price-container">
+                                <div class="price pro-price"></div>
+                                <div class="price--yearly"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                    <div class="billing-toggle">
+                        <span class="billing-toggle__label active">Monthly</span>
+                        <div class="toggle">
+                            <input type="checkbox" id="billingSwitch">
+                            <label for="billingSwitch"></label>
+                        </div>
+                        <span class="billing-toggle__label">Yearly</span>
+                    </div>
+
+
+                </section>
+
+
+                <!-- Step 2 content -->
+
+                <section class="addons">
+                    <h2 class="title">Pick add-ons</h2>
+                    <p class="subtitle">Add-ons help enhance your gaming experience.</p>
+                    <div class="addon">
+                        <label>
+                            <input type="checkbox">
+                            <div class="addon__content">
+                                <div>
+                                    <h3 class="addon__name">Online service</h3>
+                                    <p class="addon__desc">Access to multiplayer games</p>
+                                </div>
+                                <span class="addon__price">+$1/mo</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="addon">
+                        <label>
+                            <input type="checkbox">
+                            <div class="addon__content">
+                                <div>
+                                    <h3 class="addon__name">Larger storage</h3>
+                                    <p class="addon__desc">Extra 1TB of cloud save</p>
+                                </div>
+                                <span class="addon__price">+$2/mo</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="addon">
+                        <label>
+                            <input type="checkbox">
+                            <div class="addon__content">
+                                <div>
+                                    <h3 class="addon__name">Customizable profile</h3>
+                                    <p class="addon__desc">Custom theme on your profile</p>
+                                </div>
+                                <span class="addon__price">+$2/mo</span>
+                            </div>
+                        </label>
+                    </div>
+                </section>
+
+                <section class="summary">
+                    <h2 class="title">Finishing up</h2>
+                    <p class="subtitle">Double-check everything looks OK before confirming.</p>
+                     <div class="user-plan"></div>
+                    
+                    
+                </section>
+
+
+
+
+            </div>
+
+
+            <!-- Buttons -->
+
+        </section>
+        <div class="form__btns">
+
+            <button class="form__btns__back">Go Back</button>
+            <button class="form__btns__next">Next Step</button>
+            <button class="form__btns__confirm">Confirm</button>
+        </div>
+         </div>
+       
+
+        <article class="confirmation-container">
+            <div class="icon-wrapper">
+                <div class="circle">
+                    <svg class="checkmark" viewBox="0 0 52 52">
+                        <path d="M14 27l7 7 17-17" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+            <h2>Thank you!</h2>
+            <p class="description">
+                Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need
+                support, please feel free to email us at
+                <a href="mailto:support@loremgaming.com">support@loremgaming.com</a>.
+            </p>
+        </article>
+
+    </main>
+</body>
+<script src="/scripts/index.js" type="module"></script>
+
+</html>

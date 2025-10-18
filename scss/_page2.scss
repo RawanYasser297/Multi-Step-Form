@@ -1,0 +1,123 @@
+$primary-color: var(--blue-950);
+$secondary-color: var(--blue-100);
+$accent-color: var(--purple-600);
+$active-bg: var(--blue-50);
+
+.plans {
+  display: block;
+  // flex: 1;
+  .pricing__plans {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    height: 170px;
+  }
+}
+
+.plan {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &__icon {
+    flex: 1;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__name {
+    color: $primary-color;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    font-size: 1.1rem;
+  }
+
+  &__price-container {
+    .price {
+      color: #777;
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+    }
+    .price--yearly {
+      color: $primary-color;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+  }
+
+  &.active {
+    border-color: $accent-color;
+    background: $active-bg;
+  }
+
+  &:hover {
+    border-color: $accent-color;
+  }
+}
+
+.billing-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  height: 50px;
+  background-color: $active-bg;
+  border-radius: var(--border-radius);
+
+  &__label {
+    font-size: 0.9rem;
+    color: #777;
+    &.active {
+      color: $primary-color;
+      font-weight: 600;
+    }
+  }
+
+  .toggle {
+    position: relative;
+    width: 45px;
+    height: 22px;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    label {
+      position: absolute;
+      cursor: pointer;
+      inset: 0;
+      background-color: $primary-color;
+      border-radius: 20px;
+      transition: 0.4s;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 16px;
+        width: 16px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        border-radius: 50%;
+        transition: 0.4s;
+      }
+    }
+
+    input:checked + label {
+      background-color: $accent-color;
+    }
+
+    input:checked + label::before {
+      transform: translateX(23px);
+    }
+  }
+}

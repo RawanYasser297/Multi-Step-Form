@@ -1,0 +1,70 @@
+$primary-color: var(--blue-950);
+$accent-color: var(--purple-600);
+$border-color: var(--purple-200);
+$bg-active: var(--blue-50);
+
+.addons {
+  display: block;
+  background: white;
+  width: 100%;
+}
+
+.addon {
+  width: 100%;
+  border: 1px solid $border-color;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: 0.3s ease;
+  cursor: pointer;
+
+
+  label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] {
+    accent-color: $accent-color;
+    width: 18px;
+    height: 18px;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  &__name {
+    color: $primary-color;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  &__desc {
+    font-size: 0.85rem;
+    color: #888;
+  }
+
+  &__price {
+    color: $accent-color;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  &:hover {
+    border-color: $accent-color;
+    background: $bg-active;
+  }
+
+  &.selected {
+    border-color: $accent-color;
+    background: $bg-active;
+  }
+}

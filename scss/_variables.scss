@@ -1,0 +1,42 @@
+// 🌈 Sass Variables
+$font-family: "Ubuntu", sans-serif;
+$font-size-body: 16px;
+
+// Primary
+$blue-950: hsl(213, 96%, 18%);
+$purple-600: hsl(243, 100%, 62%);
+$blue-300: hsl(228, 100%, 84%);
+$blue-200: hsl(206, 94%, 87%);
+$red-500: hsl(354, 84%, 57%);
+
+// Neutral
+$grey-500: hsl(231, 11%, 63%);
+$purple-200: hsl(229, 24%, 87%);
+$blue-100: hsl(218, 100%, 97%);
+$blue-50: hsl(231, 100%, 99%);
+$white: hsl(0, 100%, 100%);
+
+$border-radius: .8rem;
+$transition-speed: 0.3s;
+$padding: 2rem 1.5rem;
+
+// 🌍 Expose as CSS Variables
+:root {
+  --font-family: #{$font-family};
+  --font-size-body: #{$font-size-body};
+
+  --blue-950: #{$blue-950};
+  --purple-600: #{$purple-600};
+  --blue-300: #{$blue-300};
+  --blue-200: #{$blue-200};
+  --red-500: #{$red-500};
+
+  --grey-500: #{$grey-500};
+  --purple-200: #{$purple-200};
+  --blue-100: #{$blue-100};
+  --blue-50: #{$blue-50};
+  --white: #{$white};
+  --border-radius: #{$border-radius};
+  --transition-speed: #{$transition-speed};
+  --padding: #{$padding};
+}
