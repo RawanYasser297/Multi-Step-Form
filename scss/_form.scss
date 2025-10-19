@@ -9,9 +9,15 @@
 .swapperAndBtnsContainer{
   width: 500px;
 
-  @media (max-width:500px) {
-     width: 100%;
+  @media (max-width:768px) {
+     transform: translateY(-55px);
+     margin: 0 auto;
   }
+
+   @media (max-width:500px) {
+    width: 100%;
+  }
+  
 }
 
   .title {
